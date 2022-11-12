@@ -1,0 +1,29 @@
+<h1>My todos</h1>
+
+<div class="container">
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Descryption</th>
+                <th>Done</th>
+                <th>Date</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of todos">
+                <td>{{e.descryption}}</td>
+                <td>{{e.done}}</td>
+                <td>{{e.targetDate | date | uppercase}}</td>
+                <td><button (click)="deteteTodo(e.id)" class="btn btn-warning">Detete</button></td>
+                <td><button (click)="updateTodo(e.id)" class="btn btn-success">Update</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <td><button (click)="addTodo()" class="btn btn-success">Add</button></td>
+    </div>
+</div>

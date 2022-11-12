@@ -1,0 +1,18 @@
+<H1>Welcome</H1>
+
+<div class="container">
+    Welcome !!! {{name}} You can manage your todos <a routerLink="/todo">here</a>
+    Welcome to My App :).
+</div>
+
+<div class="container">
+    Click here to get customized welcome message
+    <button (click)="getMessageWithParameter()"> click here to get message !!!</button>
+    <br>
+    User Name : <input type="text"  [(ngModel)]="name">
+</div>
+
+<div class="container">
+<h2> Your Customized Welcome Message</h2>
+    {{message}}
+</div>
